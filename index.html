@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app">
+    <header class="top-bar">
+        <h1>My Tasks</h1>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <section class="stats">
+        <div><span id="totalCount">0</span><span class="label">Total</span></div>
+        <div><span id="completedCount">0</span><span class="label">Completed</span></div>
+        <div><span id="pendingCount">0</span><span class="label">Pending</span></div>
+    </section>
+
+    <section class="controls">
+        <div class="input-row">
+            <input id="taskInput" type="text" placeholder="What do you need to do?">
+        </div>
+        <div class="input-row inline">
+            <select id="priorityInput">
+                <option value="medium">Priority: Medium</option>
+                <option value="high">Priority: High</option>
+                <option value="low">Priority: Low</option>
+            </select>
+            <input id="dateInput" type="date">
+            <button id="addBtn">Add Task</button>
+        </div>
+        <div class="input-row">
+            <input id="searchInput" type="text" placeholder="Search tasks...">
+        </div>
+    </section>
+
+    <section class="list-section">
+        <ul id="taskList" class="task-list"></ul>
+    </section>
+
+    <footer class="footer">
+        <button id="clearCompleted" class="secondary-btn">Clear Completed</button>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
